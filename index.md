@@ -20,17 +20,13 @@ Our team's many contributions to the OpenJDK and the ecosystem include the [Powe
 
 In the following, you find downloads of SapMachine and our build of [JDK Mission Control (JMC)](https://openjdk.org/projects/jmc/):
 
-<select id="sapmachine_major_select" class="download_select">
-</select>
+<select aria-label="Select the major version of SapMachine" id="sapmachine_major_select" class="download_select"></select>
 
-<select id="sapmachine_imagetype_select" class="download_select">
-</select>
+<select aria-label="Select either JDK or JRE" id="sapmachine_imagetype_select" class="download_select"></select>
 
-<select id="sapmachine_os_select" class="download_select">
-</select>
+<select aria-label="Select the Operating System" id="sapmachine_os_select" class="download_select"></select>
 
-<select id="sapmachine_version_select" class="download_select">
-</select>
+<select aria-label="Select the version" id="sapmachine_version_select" class="download_select"></select>
 
 <button id="sapmachine_download_button" type="button" class="download_button">Download</button>
 
@@ -40,13 +36,13 @@ In the following, you find downloads of SapMachine and our build of [JDK Mission
 </div>
 
 <div class="download_filter">
-  <input type="checkbox" id="sapmachine_lts_checkbox" name="lts" checked>
+  <input type="checkbox" aria-label="Long Term Support Releases (LTS)" id="sapmachine_lts_checkbox" name="lts" checked>
   <label for="lts">Long Term Support Releases (LTS)</label>
 
-  <input type="checkbox" id="sapmachine_nonlts_checkbox" name="nonlts" checked>
+  <input type="checkbox" aria-label="Short Term Support Releases" id="sapmachine_nonlts_checkbox" name="nonlts" checked>
   <label for="nonlts">Short Term Support Releases</label>
 
-  <input type="checkbox" id="sapmachine_ea_checkbox" name="ea">
+  <input type="checkbox" aria-label="Pre-Releases" id="sapmachine_ea_checkbox" name="ea">
   <label for="ea">Pre-Releases</label>
 </div>
 
