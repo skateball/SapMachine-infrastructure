@@ -1,0 +1,34 @@
+name: build & publish SapMachine Garden Linux container image
+
+on:
+  workflow_call:
+    inputs:
+      sapMachineVersion:
+        type: string
+        description: "SapMachine version (e.g. 21)"
+      gardenLinuxVersion:
+        type: string
+        description: "GardenLinux version (e.g. 1592)"        
+jobs:
+  publish_container:
+    name: publish gardenlinux container base image
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish images
+        run: |
+            SM_FLAVOURS=(jdk jdk-headless jre jre-headless)
+            SM_REGISTRY="ghcr.io/sap/sapmachine"
+            cd dockerfiles/${{ inputs.sapMachineVersion }}/gardenlinux/${{ inputs.gardenLinuxVersion }}
+            podman login -u token -p ${{ github.token }} ghcr.io
+            for sm_flvr in "${SM_FLAVOURS[@]}" ; do
+              tag=${{ inputs.sapMachineVersion }}-${sm_flvr}-gl-${{ inputs.gardenLinuxVersion }}
+              cd ${sm_flvr}
+              podman manifest create ${SM_REGISTRY}:$tag
+              podman build --platform linux/amd64 --manifest ${SM_REGISTRY}:$tag .
+              podman manifest push ${SM_REGISTRY}:$tag
+              cd ..
+            done
