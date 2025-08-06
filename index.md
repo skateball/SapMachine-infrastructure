@@ -52,9 +52,9 @@ In the following, you find downloads of SapMachine and our build of JDK Mission 
 
 ## Documentation
 
-Check out our [FAQs](doc/Frequently-Asked-Questions) and [Documentation pages](doc) <strong>ToDo: hier muss noch eine Übersichtsseite hin</strong>for more information, including:
+Check out our [FAQs](docs/Frequently-Asked-Questions) and [Documentation pages](docs) <strong>ToDo: hier muss noch eine Übersichtsseite hin</strong>for more information, including:
 
-* [Installation Manual](doc/Installation) and [Docker Images](doc/Docker-Images)
-* [Maintenance and Support of SapMachine](doc/Maintenance-and-Support)
-* [Certifications and Java Compatibility](doc/Certification-and-Java-Compatibility)
-* [List of Differences between SapMachine and OpenJDK](doc/Differences-between-SapMachine-and-OpenJDK)
+* [Installation Manual](docs/Installation) and [Docker Images](doc/Docker-Images)
+* [Maintenance and Support of SapMachine](docs/Maintenance-and-Support)
+* [Certifications and Java Compatibility](docs/Certification-and-Java-Compatibility)
+* [List of Differences between SapMachine and OpenJDK](docs/Differences-between-SapMachine-and-OpenJDK)
