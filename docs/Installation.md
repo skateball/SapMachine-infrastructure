@@ -1,8 +1,8 @@
 # Contents
-* [Linux](https://github.com/SAP/SapMachine/wiki/Installation#-linux)
-* [macOS](https://github.com/SAP/SapMachine/wiki/Installation#-macos)
-* [Windows](https://github.com/SAP/SapMachine/wiki/Installation#-windows)
-* [SDKMAN](https://github.com/SAP/SapMachine/wiki/Installation#-sdkman)
+* [Linux](#linux)
+* [macOS](#macos)
+* [Windows](#windows)
+* [SDKMAN](#sdkman)
 
 ## [](#Linux) Linux
 
@@ -11,17 +11,13 @@
 1. Add the SapMachine GPG key
 
 ```
-wget -qO- https://dist.sapmachine.io/debian/sapmachine.key | sudo tee /etc/apt/trusted.gpg.d/sapmachine.asc > /dev/null
+wget -qO- https://dist.sapmachine.io/debian/sapmachine.key > /etc/apt/trusted.gpg.d/sapmachine.asc
 ```
-
 2. Add the SapMachine repository
-
 ```
-echo "deb https://dist.sapmachine.io/debian/$(dpkg --print-architecture)/ ./" | sudo tee /etc/apt/sources.list.d/sapmachine.list >/dev/null
+echo "deb https://dist.sapmachine.io/debian/$(dpkg --print-architecture)/ ./" > /etc/apt/sources.list.d/sapmachine.list
 ```
-
 3. Install the desired SapMachine version(s)
-
 ```
 apt-get update
 apt-get install sapmachine-21-jdk
@@ -30,19 +26,14 @@ apt-get install sapmachine-21-jdk
 ### Alpine
 
 1. Add the SapMachine RSA key
-
 ```
 wget -qO /etc/apk/keys/sapmachine-apk.rsa.pub https://dist.sapmachine.io/alpine/sapmachine-apk.rsa.pub
 ```
-
 2. Add the SapMachine APK repository
-
 ```
 echo "https://dist.sapmachine.io/alpine" >> /etc/apk/repositories
 ```
-
 3. Install the desired SapMachine version(s)
-
 ```
 apk add sapmachine-21-jdk
 ```
