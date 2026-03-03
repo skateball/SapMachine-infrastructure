@@ -17,6 +17,11 @@ jsarr:
   - js/jquery-3.3.1.min.js
   - js/sapmachine.js
 
+# News-Konfiguration
+news:
+  max_on_homepage: 5
+  show_excerpt: false
+  
 include: [".well-known"]
 
 # Exclude from processing.
